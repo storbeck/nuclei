@@ -403,7 +403,7 @@ func parseTemplate(data []byte, options protocols.ExecutorOptions) (*Template, e
 		}
 	}
 
-	if !(template.Verified && verifier.Identifier() == "projectdiscovery/nuclei-templates") {
+	if !(template.Verified && verifier.Identifier() == "praetorian-inc/nuclei-templates") {
 		template.Options.RawTemplate = data
 	}
 	return template, nil
