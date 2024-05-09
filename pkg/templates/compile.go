@@ -402,10 +402,7 @@ func parseTemplate(data []byte, options protocols.ExecutorOptions) (*Template, e
 			break
 		}
 	}
-
-	if !(template.Verified && (verifier.Identifier() == "projectdiscovery/nuclei-templates" || verifier.Identifier() == "unsigned" || verifier.Identifier() == "praetorian-inc/nuclei-templates")) {
-		template.Options.RawTemplate = data
-	}
+	template.Options.RawTemplate = data
 	return template, nil
 }
 
